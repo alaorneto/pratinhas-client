@@ -3,5 +3,5 @@
 </script>
 
 <div>
-    {conta.nome}, {conta.data_inicial}
+    {conta.nome}, {conta.saldo_atual}
 </div>

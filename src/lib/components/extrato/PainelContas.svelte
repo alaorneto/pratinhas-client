@@ -1,5 +1,5 @@
 <script>   
-    import Conta from './Conta.svelte'
+    import Conta from '$lib/components/extrato/Conta.svelte'
     export let contas;
 </script>
 

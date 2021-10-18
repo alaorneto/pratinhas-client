@@ -11,7 +11,7 @@
 </script>
 
 <script>
-	import { session } from '$app/stores';
+	import { page, session } from '$app/stores';
 	import { send } from '$lib/auth'
 	import '../../styles/tailwind-output.css';
 
@@ -38,15 +38,15 @@
 			</div>
 
 			<nav class="hidden md:flex space-x-10">
-				<a href="/app/graficos" class="text-base font-medium text-gray-500 hover:text-gray-900">
+				<a href="/app/graficos" class="text-base font-medium text-gray-500 hover:text-gray-900" class:font-black={$page.path.startsWith('/app/graficos')}>
 					Gráficos
 				</a>
 
-				<a href="/app/extrato" class="text-base font-medium text-gray-500 hover:text-gray-900">
+				<a href="/app/extrato" class="text-base font-medium text-gray-500 hover:text-gray-900" class:font-black={$page.path.startsWith('/app/extrato')}>
 					Extrato
 				</a>
 
-				<a href="/app/orcamento" class="text-base font-medium text-gray-500 hover:text-gray-900">
+				<a href="/app/orcamento" class="text-base font-medium text-gray-500 hover:text-gray-900" class:font-black={$page.path.startsWith('/app/orcamento')}>
 					Orçamento
 				</a>
 			</nav>
@@ -77,7 +77,7 @@
 		</div>
 		
 		<div class="p-4">
-			<slot />
+			<slot></slot>
 		</div>
 	</div>
 </div>
